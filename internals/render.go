@@ -35,8 +35,10 @@ func RenderArena(m *Model) {
 	)
 }
 
-func RenderRabbit(m *Model) {
-	m.arena[m.rabbit.position.x][m.rabbit.position.y] = m.rabbitSymbol
+func RenderRabbits(m *Model) {
+	for _, val := range m.allRabbits {
+		m.arena[val.position.x][val.position.y] = m.rabbitSymbol
+	}
 }
 
 func RenderFood(m *Model) {
